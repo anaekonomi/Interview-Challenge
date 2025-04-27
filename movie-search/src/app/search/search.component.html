@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>Movie Search</h1>
+  
+    <input 
+      type="text" 
+      [(ngModel)]="searchQuery" 
+      (keyup.enter)="searchMovies()" 
+      placeholder="Search for a movie..." 
+      class="search-input"
+    />
+  
+    <div class="movies">
+      <div 
+        *ngFor="let movie of movies" 
+        class="movie-card"
+      >
+        <a 
+          [href]="'https://www.imdb.com/title/' + movie.imdbID" 
+          target="_blank"
+        >
+          <img 
+            [src]="movie.Poster !== 'N/A' ? movie.Poster : fallbackImage" 
+            [alt]="movie.Title"
+          />
+          <p>{{ movie.Title }}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  

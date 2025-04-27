@@ -1,0 +1,14 @@
+C:\Users\anaek\source\repos\SudokuAlgorithm\SudokuAlgorithm\bin\Debug\net8.0\SudokuAlgorithm.exe
+C:\Users\anaek\source\repos\SudokuAlgorithm\SudokuAlgorithm\bin\Debug\net8.0\SudokuAlgorithm.deps.json
+C:\Users\anaek\source\repos\SudokuAlgorithm\SudokuAlgorithm\bin\Debug\net8.0\SudokuAlgorithm.runtimeconfig.json
+C:\Users\anaek\source\repos\SudokuAlgorithm\SudokuAlgorithm\bin\Debug\net8.0\SudokuAlgorithm.dll
+C:\Users\anaek\source\repos\SudokuAlgorithm\SudokuAlgorithm\bin\Debug\net8.0\SudokuAlgorithm.pdb
+C:\Users\anaek\source\repos\SudokuAlgorithm\SudokuAlgorithm\obj\Debug\net8.0\SudokuAlgorithm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anaek\source\repos\SudokuAlgorithm\SudokuAlgorithm\obj\Debug\net8.0\SudokuAlgorithm.AssemblyInfoInputs.cache
+C:\Users\anaek\source\repos\SudokuAlgorithm\SudokuAlgorithm\obj\Debug\net8.0\SudokuAlgorithm.AssemblyInfo.cs
+C:\Users\anaek\source\repos\SudokuAlgorithm\SudokuAlgorithm\obj\Debug\net8.0\SudokuAlgorithm.csproj.CoreCompileInputs.cache
+C:\Users\anaek\source\repos\SudokuAlgorithm\SudokuAlgorithm\obj\Debug\net8.0\SudokuAlgorithm.dll
+C:\Users\anaek\source\repos\SudokuAlgorithm\SudokuAlgorithm\obj\Debug\net8.0\refint\SudokuAlgorithm.dll
+C:\Users\anaek\source\repos\SudokuAlgorithm\SudokuAlgorithm\obj\Debug\net8.0\SudokuAlgorithm.pdb
+C:\Users\anaek\source\repos\SudokuAlgorithm\SudokuAlgorithm\obj\Debug\net8.0\SudokuAlgorithm.genruntimeconfig.cache
+C:\Users\anaek\source\repos\SudokuAlgorithm\SudokuAlgorithm\obj\Debug\net8.0\ref\SudokuAlgorithm.dll

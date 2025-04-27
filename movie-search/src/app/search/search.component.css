@@ -1,0 +1,43 @@
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.search-input {
+  width: 60%;
+  padding: 12px;
+  font-size: 18px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.movies {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.movie-card {
+  width: 200px;
+  text-align: center;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.movie-card img:hover {
+  transform: scale(1.05);
+}
+
+.movie-card p {
+  margin-top: 10px;
+  font-weight: bold;
+}
