@@ -1,0 +1,10 @@
+
+# Ignore Visual Studio temporary files
+.vs/
+.vs2019/
+.vs2017/
+*.vscode/
+
+# Ignore build directories
+bin/
+obj/

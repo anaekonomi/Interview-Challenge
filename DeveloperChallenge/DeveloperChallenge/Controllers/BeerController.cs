@@ -48,6 +48,22 @@ namespace DeveloperChallenge.Controllers
             return Ok("Beer added successfully.");
         }
 
+        [HttpPost("add")]
+        [ProducesResponseType(statusCode: 200, type: typeof(string))]
+        [ProducesResponseType(statusCode: 400)]
+        [ProducesResponseType(statusCode: 500, type: typeof(ExceptionResponse))]
+        public IActionResult AddRating([FromBody] AddRatingsDTO rate)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(rate);
+
+            if (rate == null)
+                return BadRequest();
+
+            _beerRepository.AddRatings(rate);
+            return Ok("Rating added successfully.");
+        }
+
         /// <summary>
         /// Get all beers
         /// </summary>

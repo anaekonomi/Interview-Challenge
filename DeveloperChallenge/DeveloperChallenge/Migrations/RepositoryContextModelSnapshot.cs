@@ -21,6 +21,27 @@ namespace DeveloperChallenge.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("DeveloperChallenge.DAO.Ratings", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BeerId")
+                        .HasColumnType("int");
+
+                    b.Property<double?>("Rating")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BeerId");
+
+                    b.ToTable("Ratings");
+                });
+
             modelBuilder.Entity("DeveloperChallenge.Models.Beer", b =>
                 {
                     b.Property<int>("Id")
@@ -43,6 +64,22 @@ namespace DeveloperChallenge.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Beer");
+                });
+
+            modelBuilder.Entity("DeveloperChallenge.DAO.Ratings", b =>
+                {
+                    b.HasOne("DeveloperChallenge.Models.Beer", "Beer")
+                        .WithMany("Ratings")
+                        .HasForeignKey("BeerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Beer");
+                });
+
+            modelBuilder.Entity("DeveloperChallenge.Models.Beer", b =>
+                {
+                    b.Navigation("Ratings");
                 });
 #pragma warning restore 612, 618
         }

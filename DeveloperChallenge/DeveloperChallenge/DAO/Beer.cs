@@ -1,4 +1,6 @@
-﻿namespace DeveloperChallenge.Models
+﻿using DeveloperChallenge.DAO;
+
+namespace DeveloperChallenge.Models
 {
     /// <summary>
     /// Beer Model
@@ -24,5 +26,7 @@
         /// Rating
         /// </summary>
         public double? Rating { get; set; }
+
+        public ICollection<Ratings> Ratings { get; set; }
     }
 }

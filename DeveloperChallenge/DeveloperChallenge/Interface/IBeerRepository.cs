@@ -14,6 +14,8 @@ namespace DeveloperChallenge.Interface
         /// <param name="beerDto"></param>
         void AddBeer(AddBeerDTO beerDto);
 
+        void AddRatings(AddRatingsDTO ratings);
+
         /// <summary>
         /// Gets all beers
         /// </summary>

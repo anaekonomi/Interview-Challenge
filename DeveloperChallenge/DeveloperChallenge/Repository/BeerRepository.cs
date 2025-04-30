@@ -1,6 +1,8 @@
-﻿using DeveloperChallenge.DTO;
+﻿using DeveloperChallenge.DAO;
+using DeveloperChallenge.DTO;
 using DeveloperChallenge.Interface;
 using DeveloperChallenge.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace DeveloperChallenge.Repository
 {
@@ -37,6 +39,17 @@ namespace DeveloperChallenge.Repository
             _context.SaveChanges();
         }
 
+        public void AddRatings(AddRatingsDTO ratings)
+        {
+            var rate = new Ratings
+            {
+                Rating = ratings.Rating,
+                BeerId = ratings.BeerId
+            };
+            _context.Ratings.Add(rate);
+            _context.SaveChanges();
+        }
+
         /// <summary>
         /// Gets all beers
         /// </summary>
@@ -69,14 +82,16 @@ namespace DeveloperChallenge.Repository
         /// <exception cref="Exception"></exception>
         public void UpdateBeerRating(int beerId, double newRating)
         {
-            var beer = _context.Beer.FirstOrDefault(b => b.Id == beerId);
-            if (beer == null)
-                throw new Exception("Beer not found.");
+            _context.Ratings.Add(new Ratings { Rating = newRating, BeerId = beerId });
 
-            if (beer.Rating == null)
-                beer.Rating = newRating;
-            else
-                beer.Rating = (beer.Rating + newRating) / 2;
+            var beer = _context.Beer.Include(b => b.Ratings).FirstOrDefault(b => b.Id == beerId);
+
+            var count = beer.Ratings.Count;
+            var sum = beer.Ratings.Sum(r => r.Rating);
+
+            var avg = sum / count;
+
+            beer.Rating = avg;
 
             _context.SaveChanges();
         }
